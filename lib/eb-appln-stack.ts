@@ -65,21 +65,21 @@ export class EBApplnStack extends cdk.Stack {
                 optionName: 'IamInstanceProfile',
                 value: myProfileName,
             },
-            {
-                namespace: 'aws:autoscaling:asg',
-                optionName: 'MinSize',
-                value: props?.maxSize ?? '1',
-            },
-            {
-                namespace: 'aws:autoscaling:asg',
-                optionName: 'MaxSize',
-                value: props?.maxSize ?? '1',
-            },
-            {
-                namespace: 'aws:ec2:instances',
-                optionName: 'InstanceTypes',
-                value: props?.instanceTypes ?? 't2.micro',
-            },
+            // {
+            //     namespace: 'aws:autoscaling:asg',
+            //     optionName: 'MinSize',
+            //     value: props?.maxSize ?? '1',
+            // },
+            // {
+            //     namespace: 'aws:autoscaling:asg',
+            //     optionName: 'MaxSize',
+            //     value: props?.maxSize ?? '1',
+            // },
+            // {
+            //     namespace: 'aws:ec2:instances',
+            //     optionName: 'InstanceTypes',
+            //     value: props?.instanceTypes ?? 't2.micro',
+            // },
         ];
 
         // Create an Elastic Beanstalk environment to run the application
