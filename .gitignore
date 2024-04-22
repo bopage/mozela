@@ -6,3 +6,23 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+/mozela/.phpunit.cache
+/mozela/node_modules
+/mozela/public/build
+/mozela/public/hot
+/mozela/public/storage
+/mozela/storage/*.key
+/mozela/vendor
+/mozela/.env
+/mozela/.env.backup
+/mozela/.env.production
+/mozela/.phpunit.result.cache
+/mozela/Homestead.json
+/mozela/Homestead.yaml
+/mozela/auth.json
+/mozela/npm-debug.log
+/mozela/yarn-error.log
+/mozela/.fleet
+/mozela/.idea
+/mozela/.vscode
