@@ -20,7 +20,7 @@ export class EBApplnStack extends cdk.Stack {
         // The code that defines your stack goes here
         // Construct an S3 asset Zip from directory up.
         const webAppZipArchive = new s3assets.Asset(this, 'WebAppZip', {
-            path: `${__dirname}/../mozela/public`,
+            path: `${__dirname}/../mozela`,
         });
 
         // Create a ElasticBeanStalk app.
