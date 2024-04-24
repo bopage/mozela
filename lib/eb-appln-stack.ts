@@ -20,7 +20,7 @@ export class EBApplnStack extends cdk.Stack {
         // The code that defines your stack goes here
         // Construct an S3 asset Zip from directory up.
         const webAppZipArchive = new s3assets.Asset(this, 'WebAppZip', {
-            path: `${__dirname}/../mozela`,
+            path: `${__dirname}/../src`,
         });
 
         // Create a ElasticBeanStalk app.
@@ -84,7 +84,7 @@ export class EBApplnStack extends cdk.Stack {
 
         // Create an Elastic Beanstalk environment to run the application
         const elbEnv = new elasticbeanstalk.CfnEnvironment(this, 'Environment', {
-            environmentName: props?.envName ?? "MozelaEnvironment",
+            environmentName: props?.envName ?? "MozelaEnv",
             applicationName: app.applicationName || appName,
             solutionStackName: '64bit Amazon Linux 2023 v4.1.1 running PHP 8.2',
             optionSettings: optionSettingProperties,
